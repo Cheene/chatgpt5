@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
-    <!-- 英文主页 (默认语言) -->
+    <!-- English Pages -->
     <url>
         <loc>https://chatgpt5.com/</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/"/>
@@ -13,27 +13,24 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/"/>
         <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/"/>
         <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/"/>
     </url>
     
-    <!-- 英文关于页面 -->
     <url>
-        <loc>https://chatgpt5.com/about.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <loc>https://chatgpt5.com/technical.html</loc>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/about.html"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/about.html"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/about.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/about.html"/>
-        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/about.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/about.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/technical.html"/>
     </url>
     
-    <!-- 中文主页 -->
+    <!-- Chinese Pages -->
     <url>
         <loc>https://chatgpt5.com/zh/</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/"/>
@@ -41,133 +38,118 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/"/>
         <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/"/>
         <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/"/>
     </url>
     
-    <!-- 中文关于页面 -->
     <url>
-        <loc>https://chatgpt5.com/zh/about.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <loc>https://chatgpt5.com/zh/technical.html</loc>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/about.html"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/about.html"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/about.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/about.html"/>
-        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/about.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/about.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/technical.html"/>
     </url>
     
-    <!-- 德文主页 -->
+    <!-- German Pages -->
     <url>
         <loc>https://chatgpt5.com/de/</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/"/>
         <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/"/>
         <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/"/>
     </url>
     
-    <!-- 德文关于页面 -->
     <url>
-        <loc>https://chatgpt5.com/de/about.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <loc>https://chatgpt5.com/de/technical.html</loc>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/about.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/about.html"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/about.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/about.html"/>
-        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/about.html"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/about.html"/>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/technical.html"/>
     </url>
     
-    <!-- 日文主页 -->
+    <!-- Japanese Pages -->
     <url>
         <loc>https://chatgpt5.com/ja/</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/"/>
         <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/"/>
         <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/"/>
     </url>
     
-    <!-- 日文关于页面 -->
     <url>
-        <loc>https://chatgpt5.com/ja/about.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <loc>https://chatgpt5.com/ja/technical.html</loc>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/about.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/about.html"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/about.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/about.html"/>
-        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/about.html"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/about.html"/>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/technical.html"/>
     </url>
     
-    <!-- 法文主页 -->
+    <!-- French Pages -->
     <url>
         <loc>https://chatgpt5.com/fr/</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/"/>
         <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/"/>
     </url>
     
-    <!-- 法文关于页面 -->
     <url>
-        <loc>https://chatgpt5.com/fr/about.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <loc>https://chatgpt5.com/fr/technical.html</loc>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/about.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/about.html"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/about.html"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/about.html"/>
-        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/about.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/about.html"/>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/technical.html"/>
     </url>
     
-    <!-- 印地语主页 -->
+    <!-- Hindi Pages -->
     <url>
         <loc>https://chatgpt5.com/hi/</loc>
-        <lastmod>2024-01-15</lastmod>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/"/>
         <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/"/>
-        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/"/>
     </url>
     
-    <!-- 印地语关于页面 -->
     <url>
-        <loc>https://chatgpt5.com/hi/about.html</loc>
-        <lastmod>2024-01-15</lastmod>
+        <loc>https://chatgpt5.com/hi/technical.html</loc>
+        <lastmod>2025-08-07</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/about.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/about.html"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/about.html"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/about.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/about.html"/>
-        <xhtml:link rel="alternate" hreflang="hi" href="https://chatgpt5.com/hi/about.html"/>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://chatgpt5.com/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://chatgpt5.com/zh/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://chatgpt5.com/de/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://chatgpt5.com/ja/technical.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://chatgpt5.com/fr/technical.html"/>
     </url>
     
 </urlset> 

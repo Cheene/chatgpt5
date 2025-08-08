@@ -1,364 +1,170 @@
-// 导航栏功能
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+// DOM Content Loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all components
+    initNavigation();
+    initScrollEffects();
+    initAnimations();
+    initLazyLoading();
+    initVideoOptimization();
+    initLanguageSelector();
+    initPerformanceOptimizations();
 });
 
-// 关闭移动端菜单
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
+// Navigation functionality
+function initNavigation() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
 
-// 平滑滚动
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+    // Hamburger menu toggle
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             });
-        }
-    });
-});
-
-// 导航栏滚动效果
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        });
     }
-});
 
-// 滚动动画
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// 观察所有需要动画的元素
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.feature-card, .news-card, .contact-item, .about-stats .stat');
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-});
-
-// 表单提交处理
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // 获取表单数据
-        const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const message = contactForm.querySelector('textarea').value;
-        
-        // 简单的表单验证
-        if (!name || !email || !message) {
-            showNotification('请填写所有必填字段', 'error');
-            return;
-        }
-        
-        if (!isValidEmail(email)) {
-            showNotification('请输入有效的邮箱地址', 'error');
-            return;
-        }
-        
-        // 模拟表单提交
-        showNotification('消息已发送！我们会尽快回复您。', 'success');
-        contactForm.reset();
-    });
-}
-
-// 邮箱验证函数
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// 通知系统
-function showNotification(message, type = 'info') {
-    // 创建通知元素
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-        <div class="notification-content">
-            <span class="notification-message">${message}</span>
-            <button class="notification-close">&times;</button>
-        </div>
-    `;
-    
-    // 添加样式
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        z-index: 10000;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        max-width: 300px;
-    `;
-    
-    // 添加到页面
-    document.body.appendChild(notification);
-    
-    // 显示动画
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // 关闭按钮功能
-    const closeBtn = notification.querySelector('.notification-close');
-    closeBtn.addEventListener('click', () => {
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    });
-    
-    // 自动关闭
-    setTimeout(() => {
-        if (document.body.contains(notification)) {
-            notification.style.transform = 'translateX(100%)';
-            setTimeout(() => {
-                if (document.body.contains(notification)) {
-                    document.body.removeChild(notification);
+    // Smooth scrolling for anchor links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
                 }
-            }, 300);
-        }
-    }, 5000);
-}
-
-// 数字动画
-function animateNumbers() {
-    const stats = document.querySelectorAll('.stat-number');
-    
-    stats.forEach(stat => {
-        const target = parseInt(stat.textContent.replace(/[^\d]/g, ''));
-        const duration = 2000;
-        const step = target / (duration / 16);
-        let current = 0;
-        
-        const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
             }
-            
-            if (stat.textContent.includes('+')) {
-                stat.textContent = Math.floor(current) + '+';
-            } else if (stat.textContent.includes('%')) {
-                stat.textContent = current.toFixed(1) + '%';
-            } else {
-                stat.textContent = Math.floor(current);
-            }
-        }, 16);
+        });
     });
 }
 
-// 当关于区域进入视口时触发数字动画
-const aboutSection = document.querySelector('#about');
-if (aboutSection) {
-    const aboutObserver = new IntersectionObserver((entries) => {
+// Scroll effects
+function initScrollEffects() {
+    const navbar = document.querySelector('.navbar');
+    let lastScrollTop = 0;
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', debounce(function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Add/remove scrolled class for styling
+        if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        // Hide/show navbar on scroll (optional)
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            navbar.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollTop = scrollTop;
+    }, 10));
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateNumbers();
-                aboutObserver.unobserve(entry.target);
+                entry.target.classList.add('fade-in-up');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.feature-card, .capability-card, .evaluation-card, .safety-card');
+    animateElements.forEach(el => observer.observe(el));
+}
+
+// Animations
+function initAnimations() {
+    // Counter animation for stats
+    const stats = document.querySelectorAll('.stat-number');
+    const statsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                statsObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
+
+    stats.forEach(stat => statsObserver.observe(stat));
+
+    // Neural network animation
+    const nodes = document.querySelectorAll('.node');
+    const connections = document.querySelectorAll('.connection');
     
-    aboutObserver.observe(aboutSection);
+    nodes.forEach((node, index) => {
+        node.style.animationDelay = `${index * 0.2}s`;
+    });
+
+    connections.forEach((connection, index) => {
+        connection.style.animationDelay = `${index * 0.3}s`;
+    });
 }
 
-// 视差滚动效果
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.floating-element');
-    
-    parallaxElements.forEach((element, index) => {
-        const speed = 0.5 + (index * 0.1);
-        element.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-});
+// Counter animation function
+function animateCounter(element) {
+    const target = parseFloat(element.textContent);
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
 
-// 鼠标跟随效果
-document.addEventListener('mousemove', (e) => {
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    cursor.style.cssText = `
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background: rgba(0, 122, 255, 0.3);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        left: ${e.clientX - 10}px;
-        top: ${e.clientY - 10}px;
-        transition: all 0.1s ease;
-    `;
-    
-    document.body.appendChild(cursor);
-    
-    setTimeout(() => {
-        if (document.body.contains(cursor)) {
-            document.body.removeChild(cursor);
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
         }
-    }, 100);
-});
-
-// 页面加载完成后的初始化
-document.addEventListener('DOMContentLoaded', () => {
-    // 添加页面加载动画
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-    
-    // 初始化工具提示
-    initializeTooltips();
-});
-
-// 工具提示功能
-function initializeTooltips() {
-    const tooltipElements = document.querySelectorAll('[data-tooltip]');
-    
-    tooltipElements.forEach(element => {
-        element.addEventListener('mouseenter', (e) => {
-            const tooltip = document.createElement('div');
-            tooltip.className = 'tooltip';
-            tooltip.textContent = e.target.getAttribute('data-tooltip');
-            tooltip.style.cssText = `
-                position: absolute;
-                background: rgba(0, 0, 0, 0.8);
-                color: white;
-                padding: 0.5rem 1rem;
-                border-radius: 4px;
-                font-size: 0.875rem;
-                z-index: 1000;
-                pointer-events: none;
-                white-space: nowrap;
-            `;
-            
-            document.body.appendChild(tooltip);
-            
-            const rect = e.target.getBoundingClientRect();
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px';
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
-        });
-        
-        element.addEventListener('mouseleave', () => {
-            const tooltip = document.querySelector('.tooltip');
-            if (tooltip) {
-                document.body.removeChild(tooltip);
-            }
-        });
-    });
+        element.textContent = current.toFixed(1) + '%';
+    }, 16);
 }
 
-// 键盘导航支持
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        // 关闭移动端菜单
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    }
-});
-
-// 性能优化：防抖函数
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// 优化滚动事件
-const optimizedScrollHandler = debounce(() => {
-    // 滚动相关的处理逻辑
-}, 16);
-
-window.addEventListener('scroll', optimizedScrollHandler);
-
-// 图片懒加载优化
+// Lazy loading for images
 function initLazyLoading() {
-    const images = document.querySelectorAll('img[loading="lazy"]');
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.addEventListener('load', () => {
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
                     img.classList.add('loaded');
-                });
-                
-                img.addEventListener('error', () => {
-                    img.style.display = 'none';
-                    const fallback = document.createElement('div');
-                    fallback.className = 'image-fallback';
-                    fallback.innerHTML = '<i class="fas fa-image"></i><span>AI Technology</span>';
-                    fallback.style.cssText = `
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        height: 100%;
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        color: white;
-                        font-size: 1.2rem;
-                        font-weight: 600;
-                    `;
-                    img.parentNode.appendChild(fallback);
-                });
-                
-                observer.unobserve(img);
-            }
+                    imageObserver.unobserve(img);
+                }
+            });
         });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        lazyImages.forEach(img => img.classList.add('loaded'));
+    }
 }
 
-// 视频优化
+// Video optimization
 function initVideoOptimization() {
     const videoWrappers = document.querySelectorAll('.video-wrapper');
     
@@ -366,38 +172,224 @@ function initVideoOptimization() {
         const iframe = wrapper.querySelector('iframe');
         
         if (iframe) {
-            // 添加加载状态
-            iframe.addEventListener('load', () => {
-                wrapper.style.background = 'transparent';
-            });
+            // Add loading state
+            wrapper.classList.add('loading');
             
-            // 添加点击播放功能
-            wrapper.addEventListener('click', () => {
-                if (iframe.src.includes('youtube.com')) {
-                    const videoId = iframe.src.split('/').pop().split('?')[0];
-                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            // Handle iframe load
+            iframe.addEventListener('load', function() {
+                wrapper.classList.remove('loading');
+                wrapper.classList.add('loaded');
+            });
+
+            // Click to play functionality
+            wrapper.addEventListener('click', function() {
+                if (!wrapper.classList.contains('loaded')) {
+                    const src = iframe.src;
+                    iframe.src = src + (src.includes('?') ? '&' : '?') + 'autoplay=1';
+                    wrapper.classList.add('loaded');
                 }
             });
         }
     });
 }
 
-// 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', () => {
-    // 添加页面加载动画
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
+// Language selector
+function initLanguageSelector() {
+    const languageBtn = document.querySelector('.language-btn');
+    const languageDropdown = document.querySelector('.language-dropdown');
     
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    if (languageBtn && languageDropdown) {
+        // Toggle dropdown on click
+        languageBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function() {
+            languageDropdown.classList.remove('active');
+        });
+
+        // Prevent dropdown from closing when clicking inside
+        languageDropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+}
+
+// Performance optimizations
+function initPerformanceOptimizations() {
+    // Debounce scroll events
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // Preload critical resources
+    const criticalImages = [
+        'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&crop=center'
+    ];
+
+    criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+    });
+
+    // Service Worker registration (if available)
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                })
+                .catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                });
+        });
+    }
+}
+
+// Utility functions
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            timeout = null;
+            if (!immediate) func(...args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func(...args);
+    };
+}
+
+// Throttle function for performance
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+// Error handling for images
+document.addEventListener('error', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.target.style.display = 'none';
+        console.warn('Image failed to load:', e.target.src);
+    }
+}, true);
+
+// Keyboard navigation support
+document.addEventListener('keydown', function(e) {
+    // Escape key to close dropdowns
+    if (e.key === 'Escape') {
+        const dropdowns = document.querySelectorAll('.language-dropdown.active, .nav-menu.active');
+        dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+        
+        const hamburger = document.querySelector('.hamburger.active');
+        if (hamburger) hamburger.classList.remove('active');
+    }
+
+    // Enter key for buttons
+    if (e.key === 'Enter' && e.target.classList.contains('language-btn')) {
+        e.target.click();
+    }
+});
+
+// Accessibility improvements
+function initAccessibility() {
+    // Add ARIA labels
+    const buttons = document.querySelectorAll('button:not([aria-label])');
+    buttons.forEach(button => {
+        if (button.textContent.trim()) {
+            button.setAttribute('aria-label', button.textContent.trim());
+        }
+    });
+
+    // Skip to main content link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#home';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link';
+    skipLink.style.cssText = `
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: var(--primary-color);
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 10000;
+    `;
+    skipLink.addEventListener('focus', function() {
+        this.style.top = '6px';
+    });
+    skipLink.addEventListener('blur', function() {
+        this.style.top = '-40px';
+    });
+    document.body.insertBefore(skipLink, document.body.firstChild);
+}
+
+// Initialize accessibility
+initAccessibility();
+
+// Analytics tracking (if needed)
+function trackEvent(eventName, eventData = {}) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, eventData);
+    }
     
-    // 初始化工具提示
-    initializeTooltips();
+    // Custom analytics
+    console.log('Event tracked:', eventName, eventData);
+}
+
+// Track important user interactions
+document.addEventListener('click', function(e) {
+    if (e.target.matches('a[href*="openai.com"]')) {
+        trackEvent('external_link_click', {
+            link_url: e.target.href,
+            link_text: e.target.textContent
+        });
+    }
     
-    // 初始化懒加载
-    initLazyLoading();
-    
-    // 初始化视频优化
-    initVideoOptimization();
-}); 
+    if (e.target.matches('.btn-primary')) {
+        trackEvent('cta_click', {
+            button_text: e.target.textContent,
+            button_location: e.target.closest('section')?.id || 'unknown'
+        });
+    }
+});
+
+// Performance monitoring
+if ('performance' in window) {
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            if (perfData) {
+                trackEvent('page_load_performance', {
+                    load_time: perfData.loadEventEnd - perfData.loadEventStart,
+                    dom_content_loaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+                    first_paint: performance.getEntriesByName('first-paint')[0]?.startTime || 0
+                });
+            }
+        }, 0);
+    });
+} 
