@@ -1,298 +1,133 @@
-# GPT-5 Website
+# GPT-5 Learning Hub - Enhanced Website
 
-A modern, responsive website showcasing GPT-5, OpenAI's most advanced AI model. Built with HTML5, CSS3, and JavaScript, featuring a ChatGPT-inspired design with comprehensive technical details and multilingual support.
+## 概述
 
-## 🌟 Features
+这是一个基于 [awesome-chatgpt-zh](https://github.com/EmbraceAGI/awesome-chatgpt-zh) 仓库内容完善的 GPT-5 学习中心网站。网站提供了全面的 AI 技术学习资源，包括 ChatGPT 使用指南、应用开发教程、生产力工具推荐等。
 
-### Design & User Experience
-- **Modern ChatGPT-inspired UI** with clean, professional design
-- **Responsive design** that works perfectly on all devices
-- **Smooth animations** and interactive elements
-- **Neural network visualization** in the hero section
-- **Gradient backgrounds** and modern color scheme
-- **Accessibility features** including keyboard navigation and screen reader support
+## 新增功能
 
-### Content & Information
-- **Comprehensive GPT-5 overview** with detailed capabilities
-- **Performance benchmarks** and evaluation metrics
-- **Technical architecture** explanation
-- **Safety and reliability** measures
-- **Model comparison** tables
-- **Rich multimedia content** including YouTube videos
+### 1. 中文提示工程指南
+- 基于 awesome-chatgpt-zh 的中文调教指南
+- 基础对话技巧、编程开发提示、内容创作提示
+- 实用的提示工程技巧和最佳实践
 
-### Technical Features
-- **SEO optimized** with comprehensive meta tags and structured data
-- **Multilingual support** for 6 languages (English, Chinese, German, Japanese, French, Hindi)
-- **Performance optimized** with lazy loading and efficient code
-- **Modern JavaScript** with ES6+ features
-- **CSS Grid and Flexbox** for responsive layouts
-- **Intersection Observer** for scroll animations
+### 2. ChatGPT 应用生态
+- 移动应用、Web 应用、开发工具分类
+- 官方应用和第三方集成应用介绍
+- 直接链接到 ChatGPT 官方平台
 
-## 📁 Project Structure
+### 3. AI 应用开发指南
+- 快速开始指南
+- RAG 系统开发教程
+- AI 代理开发指导
+- 详细的开发步骤和流程
+
+### 4. AI 生产力工具
+- 文档处理工具
+- 数据分析工具
+- 团队协作工具
+- 提升工作效率的 AI 工具推荐
+
+### 5. 全球 AI 发展现状
+- 北美、亚太、欧洲地区 AI 技术发展
+- 各地区特色 AI 模型和平台
+- 全球 AI 技术发展趋势分析
+
+## 技术特性
+
+### 前端技术
+- 响应式设计，支持移动端和桌面端
+- 现代化的 CSS 变量和设计系统
+- 平滑滚动和动画效果
+- 交互式组件和悬停效果
+
+### 用户体验
+- 直观的导航结构
+- 清晰的内容层次
+- 美观的视觉设计
+- 流畅的交互体验
+
+### 性能优化
+- 优化的 CSS 和 JavaScript
+- 响应式图片和图标
+- 平滑的动画过渡
+- 移动端友好的触摸交互
+
+## 文件结构
 
 ```
 chatgpt5/
-├── index.html              # Main homepage (English)
-├── technical.html          # Technical details page
-├── styles.css              # Main stylesheet
-├── script.js               # JavaScript functionality
-├── robots.txt              # Search engine directives
-├── sitemap.xml             # XML sitemap for SEO
-├── README.md               # Project documentation
-├── zh/                     # Chinese language pages
-│   ├── index.html
-│   └── technical.html
-├── de/                     # German language pages
-│   ├── index.html
-│   └── technical.html
-├── ja/                     # Japanese language pages
-├── fr/                     # French language pages
-└── hi/                     # Hindi language pages
+├── index.html          # 主页面
+├── styles.css          # 样式文件
+├── enhanced.js         # 增强交互脚本
+├── favicon-new.svg     # 网站图标
+├── logo-green.svg      # Logo 文件
+└── README.md           # 项目说明
 ```
 
-## 🚀 Quick Start
+## 内容来源
 
-1. **Clone or download** the project files
-2. **Open `index.html`** in your web browser
-3. **Navigate** through the different sections
-4. **Click "Technical Details"** to view the comprehensive technical information
+本网站的内容主要基于以下资源：
 
-## 🛠️ Technology Stack
+1. **awesome-chatgpt-zh**: ChatGPT 中文指南和资源集合
+2. **OpenAI 官方文档**: GPT 系列模型的技术信息
+3. **AI 社区资源**: 开发者分享的最佳实践和教程
+4. **全球 AI 发展报告**: 各地区 AI 技术发展现状
 
-### Frontend
-- **HTML5** - Semantic markup with modern elements
-- **CSS3** - Advanced styling with Grid, Flexbox, and animations
-- **JavaScript (ES6+)** - Modern JavaScript with modules and async/await
-- **Font Awesome** - Icon library for UI elements
-- **Google Fonts** - Inter font family for typography
+## 使用方法
 
-### SEO & Performance
-- **Meta tags** - Comprehensive SEO optimization
-- **Open Graph** - Social media sharing optimization
-- **Twitter Cards** - Twitter-specific meta tags
-- **Schema.org** - Structured data for search engines
-- **Hreflang** - Multilingual SEO support
-- **Sitemap** - XML sitemap for search engine crawling
+1. 直接在浏览器中打开 `index.html` 文件
+2. 通过导航菜单浏览不同章节
+3. 使用搜索功能快速找到相关内容
+4. 点击链接访问外部资源和工具
 
-### Features
-- **Responsive Design** - Mobile-first approach
-- **Progressive Enhancement** - Works without JavaScript
-- **Accessibility** - WCAG compliant design
-- **Performance** - Optimized loading and rendering
-- **Cross-browser** - Compatible with modern browsers
+## 浏览器支持
 
-## 📱 Responsive Design
+- Chrome 80+
+- Firefox 75+
+- Safari 13+
+- Edge 80+
 
-The website is fully responsive and optimized for:
-- **Desktop** (1200px+)
-- **Tablet** (768px - 1199px)
-- **Mobile** (320px - 767px)
+## 贡献指南
 
-## 🌍 Multilingual Support
+欢迎通过以下方式贡献内容：
 
-The website supports 6 languages with proper SEO implementation:
+1. 提交 Issue 报告问题或建议
+2. 创建 Pull Request 添加新功能
+3. 改进现有内容和样式
+4. 添加新的 AI 工具和资源
 
-| Language | Code | URL Path |
-|----------|------|----------|
-| English | en | `/` (default) |
-| Chinese | zh | `/zh/` |
-| German | de | `/de/` |
-| Japanese | ja | `/ja/` |
-| French | fr | `/fr/` |
-| Hindi | hi | `/hi/` |
+## 许可证
 
-Each language version includes:
-- Translated content
-- Proper hreflang tags
-- Language-specific meta tags
-- Localized URLs
+本项目采用 MIT 许可证，详见 LICENSE 文件。
 
-## 🎨 Design System
+## 联系方式
 
-### Color Palette
-- **Primary**: `#10a37f` (ChatGPT green)
-- **Secondary**: `#1a7f64` (Dark green)
-- **Accent**: `#00d4aa` (Light green)
-- **Text**: `#1a1a1a` (Dark gray)
-- **Background**: `#ffffff` (White)
+如有问题或建议，请通过以下方式联系：
 
-### Typography
-- **Font Family**: Inter (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700, 800
-- **Responsive**: Scales appropriately on different devices
+- 提交 GitHub Issue
+- 发送邮件到项目维护者
+- 参与社区讨论
 
-### Components
-- **Cards** - Consistent styling for content sections
-- **Buttons** - Primary and secondary button styles
-- **Navigation** - Fixed header with smooth scrolling
-- **Forms** - Styled form elements (if applicable)
-- **Tables** - Responsive table layouts
+## 更新日志
 
-## 🔧 Customization
+### v3.0 (2025-01-XX)
+- 新增中文提示工程指南
+- 添加 ChatGPT 应用生态章节
+- 集成 AI 应用开发指南
+- 新增生产力工具推荐
+- 添加全球 AI 发展现状分析
+- 优化网站性能和用户体验
 
-### Colors
-Edit the CSS custom properties in `styles.css`:
-```css
-:root {
-    --primary-color: #10a37f;
-    --secondary-color: #1a7f64;
-    --accent-color: #00d4aa;
-    /* ... other colors */
-}
-```
+### v2.0 (2024-XX-XX)
+- 基础网站结构和样式
+- GPT-5 功能介绍
+- 开发者资源中心
 
-### Content
-- Update text content in HTML files
-- Replace images with your own assets
-- Modify YouTube video links
-- Add or remove sections as needed
-
-### Styling
-- Modify CSS classes for different visual styles
-- Adjust responsive breakpoints
-- Change animations and transitions
-- Update typography and spacing
-
-## 📊 Performance Features
-
-### Optimization Techniques
-- **Lazy loading** for images and videos
-- **Debounced scroll events** for performance
-- **CSS animations** instead of JavaScript where possible
-- **Minified external resources** (CDN)
-- **Efficient DOM manipulation**
-
-### Loading Strategy
-- **Critical CSS** inlined
-- **Non-critical CSS** loaded asynchronously
-- **JavaScript** loaded at the end of body
-- **Images** with proper sizing and formats
-
-## 🔍 SEO Features
-
-### On-Page SEO
-- **Meta titles** and descriptions
-- **Header structure** (H1, H2, H3)
-- **Alt text** for images
-- **Internal linking** strategy
-- **URL structure** optimization
-
-### Technical SEO
-- **XML sitemap** with all pages
-- **Robots.txt** configuration
-- **Structured data** (Schema.org)
-- **Hreflang** for multilingual support
-- **Canonical URLs**
-
-### Social Media
-- **Open Graph** tags for Facebook
-- **Twitter Cards** for Twitter
-- **Social media** sharing optimization
-
-## 🌐 Browser Support
-
-### Modern Browsers
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-### Features
-- **CSS Grid** and **Flexbox**
-- **ES6+ JavaScript**
-- **Intersection Observer API**
-- **CSS Custom Properties**
-
-## 📈 Analytics & Tracking
-
-The website includes:
-- **Event tracking** for user interactions
-- **Performance monitoring** for page load times
-- **Error tracking** for debugging
-- **Custom analytics** implementation
-
-## 🔒 Security Features
-
-- **Content Security Policy** headers
-- **XSS protection** measures
-- **Secure external links** with `rel="noopener noreferrer"`
-- **Input validation** for forms
-- **HTTPS** ready
-
-## 🚀 Deployment
-
-### Static Hosting
-The website can be deployed on any static hosting service:
-- **Netlify**
-- **Vercel**
-- **GitHub Pages**
-- **AWS S3**
-- **Cloudflare Pages**
-
-### Requirements
-- **Web server** with HTML/CSS/JS support
-- **HTTPS** for security
-- **Gzip compression** for performance
-- **CDN** for global delivery (optional)
-
-## 📝 Content Management
-
-### Adding New Content
-1. **Create new HTML files** for additional pages
-2. **Update navigation** in all language versions
-3. **Add to sitemap.xml** for SEO
-4. **Create language versions** if needed
-5. **Update meta tags** and structured data
-
-### Updating Existing Content
-1. **Edit HTML files** directly
-2. **Update all language versions** simultaneously
-3. **Refresh meta tags** if content changes significantly
-4. **Update sitemap** if URLs change
-
-## 🤝 Contributing
-
-### Development Process
-1. **Fork** the repository
-2. **Create** a feature branch
-3. **Make** your changes
-4. **Test** across different devices and browsers
-5. **Submit** a pull request
-
-### Code Standards
-- **Semantic HTML** structure
-- **CSS** with consistent naming conventions
-- **JavaScript** with modern ES6+ syntax
-- **Accessibility** compliance
-- **Performance** optimization
-
-## 📄 License
-
-This project is created for educational and demonstration purposes. The content and design are inspired by OpenAI's ChatGPT interface but are not affiliated with OpenAI.
-
-## 📞 Support
-
-For questions or support:
-- **Documentation**: Check this README file
-- **Issues**: Create an issue in the repository
-- **Contact**: Reach out through the project channels
-
-## 🔄 Updates
-
-### Version History
-- **v1.0.0** - Initial release with basic functionality
-- **v1.1.0** - Added technical details page
-- **v1.2.0** - Enhanced SEO and performance
-- **v1.3.0** - Added multilingual support
-
-### Future Enhancements
-- **Blog section** for updates
-- **Interactive demos** of GPT-5 capabilities
-- **User testimonials** section
-- **Advanced animations** and effects
-- **Dark mode** support
-- **PWA** features
+### v1.0 (2024-XX-XX)
+- 初始版本发布
+- 基础 GPT 学习内容
 
 ---
 
-**Built with ❤️ for the AI community** 
+**注意**: 这是一个教育性网站，仅用于学习目的，与 OpenAI 无官方关联。 
