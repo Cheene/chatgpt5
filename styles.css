@@ -3074,66 +3074,7 @@ section.visible {
     line-height: 1.6;
 }
 
-/* Global AI Landscape Section */
-.global-ai {
-    padding: var(--space-3xl) 0;
-}
 
-.ai-landscape-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--space-xl);
-    margin-top: var(--space-2xl);
-}
-
-.region-card {
-    background: var(--bg-card);
-    padding: var(--space-xl);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    text-align: center;
-}
-
-.region-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-}
-
-.region-card h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--accent-color);
-    margin-bottom: var(--space-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-md);
-}
-
-.region-card p {
-    color: var(--text-secondary);
-    margin-bottom: var(--space-lg);
-    line-height: 1.6;
-}
-
-.region-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    justify-content: center;
-}
-
-.feature-tag {
-    display: inline-block;
-    padding: var(--space-xs) var(--space-sm);
-    background: var(--accent-color);
-    color: white;
-    border-radius: var(--radius-full);
-    font-size: 0.8rem;
-    font-weight: 500;
-}
 
 /* Responsive adjustments for new sections */
 @media (max-width: 768px) {
@@ -3141,7 +3082,7 @@ section.visible {
     .apps-grid,
     .dev-guide-grid,
     .tools-grid,
-    .ai-landscape-grid {
+    .articles-grid {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
     }
@@ -3154,17 +3095,12 @@ section.visible {
     .app-category,
     .guide-card,
     .tool-category,
-    .region-card {
+    .article-category {
         padding: var(--space-lg);
     }
     
     .subsection-title {
         font-size: 1.3rem;
-    }
-    
-    .region-features {
-        flex-direction: column;
-        align-items: center;
     }
 }
 
@@ -3176,7 +3112,7 @@ section.visible {
     .app-category,
     .guide-card,
     .tool-category,
-    .region-card {
+    .article-category {
         padding: var(--space-md);
     }
     
